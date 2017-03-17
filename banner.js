@@ -19,7 +19,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   y[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " Whitebackground";
-
 }
 
 var slideIndex = 1;																	/* Ustawia zmienną slideIndex na "1" */	
