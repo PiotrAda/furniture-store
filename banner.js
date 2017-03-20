@@ -25,9 +25,9 @@ var slideIndex = 1;																	/* Ustawia zmienną slideIndex na "1" */
 showDivs(slideIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);														/* dodaje 1 do n */
+  showDivs(slideIndex += n);														/* funkcja dla guzików w lewo i w prawo */
 }
 
-function currentDiv(n) {															/* pokazuje nowe n*/
+function currentDiv(n) {															/* funkcja dla guzików na dole bannera*/
   showDivs(slideIndex = n);
 }
