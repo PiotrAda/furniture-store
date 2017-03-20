@@ -35,74 +35,84 @@
 		
 			<h2>Meble do przedpokoju</h2>
 
+			<div id="myModal" class="modal">
+				<div class="modal-container">
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01"></img>
+					<div id="caption"></div>
+					<div class="modalleftbutton" onclick="plusmodal(-1)">&#10094;</div>
+					<div class="modalrightbutton" onclick="plusmodal(1)">&#10095;</div>
+				</div>
+			</div>								
+			
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-belmondo.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-belmondo.jpg')" src="gallery/przedpokoj/forte-belmondo.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój BELMONDO</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-cadixo.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-cadixo.jpg')" src="gallery/przedpokoj/forte-cadixo.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój CADIXO</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-calpe.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-calpe.jpg')" src="gallery/przedpokoj/forte-calpe.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój CALPE</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-combino.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-combino.jpg')" src="gallery/przedpokoj/forte-combino.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój COMBINO</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-kadi.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-kadi.jpg')" src="gallery/przedpokoj/forte-kadi.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój KADI</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-latis.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-latis.jpg')" src="gallery/przedpokoj/forte-latis.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój LATIS</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/forte-niko.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/forte-niko.jpg')" src="gallery/przedpokoj/forte-niko.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-forte.jpg"></img></span></a>
 				<p>Przedpokój NIKO</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/brw-antwerpen.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/brw-antwerpen.jpg')" src="gallery/przedpokoj/brw-antwerpen.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-brw.jpg"></img></span></a>
 				<p>Przedpokój ANTWERPEN</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/brw-bigi.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/brw-bigi.jpg')" src="gallery/przedpokoj/brw-bigi.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-brw.jpg"></img></span></a>
 				<p>Przedpokój BIGI</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/brw-fini.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/brw-fini.jpg')" src="gallery/przedpokoj/brw-fini.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-brw.jpg"></img></span></a>
 				<p>Przedpokój FINI</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/brw-kaspian.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/brw-kaspian.jpg')" src="gallery/przedpokoj/brw-kaspian.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-brw.jpg"></img></span></a>
 				<p>Przedpokój KASPIAN</p>
 			</article>
 
 			<article>
-				<a class="tooltip"><img src="gallery/przedpokoj/brw-nepo.jpg"></img>
+				<a class="tooltip"><img class="galeria" onclick="enlarge('gallery/przedpokoj/brw-nepo.jpg')" src="gallery/przedpokoj/brw-nepo.jpg"></img>
 				<span><img alt="" src="gallery/producenci/logo-brw.jpg"></img></span></a>
 				<p>Przedpokój NEPO</p>
 			</article>
@@ -125,5 +135,7 @@
 	</footer>
 
 </div>
+
+<script type="text/javascript" src="enlarge.js"></script>
 
 </html>

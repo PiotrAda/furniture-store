@@ -7,15 +7,17 @@ function showDivs(n) {
   var dots 	= document.getElementsByClassName("empty");								/* Liczy ilość obrazków jpg z klasą "empty" */
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
+  
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" Whitebackground", "");
   }
   for (i = 0; i < y.length; i++) {
      y[i].style.display = "none";  
   }
+    for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" Whitebackground", "");
+  }
+  
   x[slideIndex-1].style.display = "block";  
   y[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " Whitebackground";
