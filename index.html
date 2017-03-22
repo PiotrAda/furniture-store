@@ -8,7 +8,8 @@
 	<meta name="description" content="Sklepy meblowe MEBLUX oferują szeroki asortyment mebli od czołowych polskich producentów. W sprzedaży mamy meble kuchenne, biurowe, salonowe, przedpokoje, sypialnie oraz dekoracje." />
 	<meta name="keywords" content="sklep, meblowy, meblux, inspiracje, urządzanie, mieszkanie, salon, kuchnia, wypoczynek, materac, szafa, dekoracje, black red white, forte, adamus, gryt" />
 	<link rel="stylesheet" href="styl.css" type="text/css" />
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favpic.png" type="image/x-icon" />
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -22,52 +23,52 @@
 				<li><a href="o-firmie.html">O firmie</a></li>
 				<li class="menu"><a href="oferta.html">Oferta</a></li>
 					<ul>
-						<li><a href="kat-kuchenne.html">Kuchenne</a></li>
-						<li><a href="kat-biurowe.html">Biurowe</a></li>
-						<li><a href="kat-mlodziezowe.html">Młodzieżowe</a></li>
-						<li><a href="kat-salon.html">Salon</a></li>
-						<li><a href="kat-tapicerowane.html">Tapicerowane</a></li>
-						<li><a href="kat-stolyikrzesla.html">Stoły i krzesła</a></li>
-						<li><a href="kat-sypialnia.html">Sypialnia</a></li>
-						<li><a href="kat-przedpokoj.html">Przedpokój</a></li>
-						<li><a href="kat-mebloscianki.html">Meblościanki</a></li>
-						<li><a href="kat-materace.html">Materace</a></li>
-						<li><a href="kat-dekoracje.html">Dekoracje</a></li>
-						<li><a href="kat-inne.html">Inne</a></li>
+						<li><a style="podlink" href="kat-kuchenne.html"><p>Kuchenne</p></a></li>
+						<li><a href="kat-biurowe.html"><p>Biurowe</p></a></li>
+						<li><a href="kat-mlodziezowe.html"><p>Młodzieżowe</p></a></li>
+						<li><a href="kat-salon.html"><p>Salon</p></a></li>
+						<li><a href="kat-tapicerowane.html"><p>Tapicerowane</p></a></li>
+						<li><a href="kat-stolyikrzesla.html"><p>Stoły i krzesła</p></a></li>
+						<li><a href="kat-sypialnia.html"><p>Sypialnia</p></a></li>
+						<li><a href="kat-przedpokoj.html"><p>Przedpokój</p></a></li>
+						<li><a href="kat-mebloscianki.html"><p>Meblościanki</p></a></li>
+						<li><a href="kat-materace.html"><p>Materace</p></a></li>
+						<li><a href="kat-dekoracje.html"><p>Dekoracje</p></a></li>
+						<li><a href="kat-inne.html"><p>Inne</p></a></li>
 					</ul>
 				<li><a href="producenci.html">Producenci</a></li>
 				<li><a href="kontakt.html">Kontakt</a></li>
 			</ol>
 		</div>
 	</header>
-	
+
 	<div id="main">
 		<div class="content">
-			<div class="display-container">
-				<div id="slideshow">
-					<a href="kat-biurowe.html"><img class="slajdy" src="images/kat-biurowe.jpg"><div class="description">Inspiracje - meble biurowe</div></img></a>
-					<a href="kat-salon.html"><img class="slajdy" src="gallery/salon/brw-gent.jpg"><div class="description">Inspiracje - meble salonowe</div></img></a>
-					<a href="kat-sypialnia.html"><img class="slajdy" src="gallery/sypialnia/forte-bellevue.jpg"><div class="description">Inspiracje - sypialnia</div></img></a>
-					<a href="kat-tapicerowane.html"><img class="slajdy" src="gallery/tapicerowane/galacollezione-lora.jpg"><div class="description">Inspiracje - narożnik</div></img></a>
-					<a href="kat-dekoracje.html"><img class="slajdy" src="images/kat-dekoracje.jpg"><div class="description">Inspiracje - dekoracje</div></img></a>
-					<a href="kat-kuchenne.html"><img class="slajdy" src="images/kat-kuchenne.jpg"><div class="description">Inspiracje - meble kuchenne</div></img></a>
+			<div id="slidercontainer">
+				<div id="slider">
+					<div id="start" class="active pictures"><a href="kat-biurowe.html"><img src="images/kat-biurowe.jpg"><div class="description">Inspiracje - meble biurowe</div></img></a></div>
+					<div class="hidden pictures"><a href="kat-salon.html"><img src="gallery/salon/brw-gent.jpg"><div class="description">Inspiracje - meble salonowe</div></img></a></div>
+					<div class="hidden pictures"><a href="kat-sypialnia.html"><img src="gallery/sypialnia/forte-bellevue.jpg"><div class="description">Inspiracje - sypialnia</div></img></a></div>
+					<div class="hidden pictures"><a href="kat-tapicerowane.html"><img src="gallery/tapicerowane/galacollezione-lora.jpg"><div class="description">Inspiracje - narożnik</div></img></a></div>
+					<div class="hidden pictures"><a href="kat-dekoracje.html"><img src="images/kat-dekoracje.jpg"><div class="description">Inspiracje - dekoracje</div></img></a></div>
+					<div class="hidden pictures"><a href="kat-kuchenne.html"><img src="images/kat-kuchenne.jpg"><div class="description">Inspiracje - meble kuchenne</div></img></a></div>
 				</div>
-				<div class="leftbutton" onclick="plusDivs(-1)">&#10094;</div>
-				<div class="rightbutton" onclick="plusDivs(1)">&#10095;</div>
+				<div class="leftbutton buttons" onclick="slideButton(-1)" >&#10094;</div>
+				<div class="rightbutton buttons" onclick="slideButton(1)" >&#10095;</div>
 				<div class="buttonssection" style="width:100%">
-					<span class="buttons empty" onclick="currentDiv(1)"></span>
-					<span class="buttons empty" onclick="currentDiv(2)"></span>
-					<span class="buttons empty" onclick="currentDiv(3)"></span>
-					<span class="buttons empty" onclick="currentDiv(4)"></span>
-					<span class="buttons empty" onclick="currentDiv(5)"></span>
-					<span class="buttons empty" onclick="currentDiv(6)"></span>
+					<span class="bottombuttons empty Whitebackground" onclick="currentDiv(1)"></span>
+					<span class="bottombuttons empty" onclick="currentDiv(2)"></span>
+					<span class="bottombuttons empty" onclick="currentDiv(3)"></span>
+					<span class="bottombuttons empty" onclick="currentDiv(4)"></span>
+					<span class="bottombuttons empty" onclick="currentDiv(5)"></span>
+					<span class="bottombuttons empty" onclick="currentDiv(6)"></span>
 				</div>
 			</div>
 			<div class="text">
 				<h3>Zostań klientem MEBLUX i ciesz się najlepszymi ofertami wiodących polskich i zagranicznych producentów!</h3>
 				<p>Dołącz do tysięcy zadowolonych klientów i urządź swoje mieszkanie w wymarzony sposób. Skorzystaj z bogatej oferty mebli wypoczynkowych, materaców, szaf, wyposażenia salonu, łazienki i mebli kuchennych.</p>
 			</div>
-			<section class="left">
+			<section class="leftarticle">
 				<article>
 					<div>
 					<img src="images/main-ofirmie.jpg" alt="O firmie" title="O firmie" />
@@ -77,7 +78,7 @@
 					<a class="wiecej" href="o-firmie.html">Czytaj dalej ></a>
 				</article>
 			</section>
-			<section class="right">
+			<section class="rightarticle">
 				<article>
 					<div>
 						<img src="images/main-oferta.jpg" alt="Oferta" title="Oferta" />
@@ -89,7 +90,7 @@
 			</section>
 		</div>
 	</div>
-	
+
 	<footer>
 		<div class="content">
 			<ul>
@@ -102,9 +103,9 @@
 			</div>
 		</div>
 	</footer>
-	
+
 </div>
 
-<script type="text/javascript" src="banner.js"></script>
+<script type="text/javascript" src="slider.js"></script>
 
 </html>

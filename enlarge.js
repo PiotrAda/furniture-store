@@ -35,8 +35,20 @@ function showModal(n) {
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
   
-  for (i = 0; i < x.length; i++) {
+  
+
+//   $("#img01").animate({
+ //       opacity: '0',
+   // });
+	
+    for (i = 0; i < x.length; i++) {
 	 modalImg.src = x[slideIndex-1].src
   }
+   
 
+  
+// $("#img01").animate({
+  //      opacity: '1',
+    //});
+  
 }
