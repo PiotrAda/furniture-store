@@ -52,79 +52,96 @@ header {
 
 header h1 a {
 	display: block;
-	margin-top: 25px;
-	text-decoration: none;
-}
-
-/* Header - SLOGAN */
-
-header p {
-	padding-bottom: 10px;
+	margin-top: 20px;
 }
 
 /* Header - MENU */
 
-header ol {
-	list-style-type: none;
-	margin:	0;
-	padding: 0;
+#menu {
+	width: 980px;
+	margin: 0 auto;
 }
 
-header ol li {
-	float: left;
-	width: 20%;
+nav {
+  margin: 0;
+  padding: 0;
+  width: 980px;
+  height: 20px;
 }
 
-header ul {
-	list-style-type: none;
-	position:	absolute;
-	display: none;
+nav ul {
+  background-color: #d3d3d3;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: block;
+  float: left;
+  position: relative;
+  width: 195px;
+}
+
+/* Sub-navigation */
+
+nav ul li ul {
+  position: absolute;
+  background-color: #7f0000;
 	z-index: 1;
-	width: 130px;
-	top: 220px;
-	margin-left: 392px;
 }
 
-header ul li {
-	width: 130px;
-	font-size: 1.1em;
+nav ul li ul li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
-header ol li a {
-	width: 196px;
-	font-size: 1.2em;
-	text-decoration: none;
-	background: #dcdcdc;
-	font-weight: bold;
-	display: block;
-	border:	1px solid #fff;
+nav a {
+  color: #7f0000;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
-header ol li p {
-	width: 196px;
-	font-size: 1.1em;
-	padding: 0;
-	margin: 0;
-	text-decoration: none;
-	background: #dcdcdc;
-	font-weight: none;
-	display: block;
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+	background-color: #f2f3f4;
 }
 
-header ol li:hover + ul {
-	display: block;
+nav ul li ul li a:hover,
+nav ul li ul li a:focus,
+nav ul li ul li a:active {
+	background-color: #812B2B;
 }
 
-header ul:hover {
-	display: block;
+nav ul li ul li a {
+  border-bottom:solid 1px #fff;
+	color: #fff;
+  padding:0;
+  font-size: 0.6em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: normal;
 }
 
-header ol li a:hover {
-	background: #f2f3f4;
+nav ul li ul li:last-child a {
+  border-bottom: none;
 }
 
-header ol li p:hover {
-	background: #f2f3f4;
+ul.submenu {
+  display: none;
+}
+
+.dropdown {
+border-left:solid 1px #fff;
 }
 
 /* Main */
@@ -755,6 +772,16 @@ footer .copyright {
 	font-weight: bold;
 	margin: 14px 0px 0px 25px;
 	text-decoration: none;
+}
+
+#oferta p {
+	color: #304055;
+	font-size: 1.2em;
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-weight: bold;
+	margin: 0px 0px 0px 15px;
+	text-decoration: none;
+	margin-bottom: 10px;
 }
 
 #oferta h2 {
