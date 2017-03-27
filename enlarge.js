@@ -5,20 +5,21 @@ var galleryArray = document.getElementsByClassName("galeria")
 var descriptionArray = document.getElementsByClassName("gallerydescription")
 
 // zmienna modalCon posłuży do przywrócenia przez funkcję display: block dla naszego modala;
-var modalCon = document.getElementById("modalContainer");
+var modalCon = document.getElementById("modal-main");
 
 // zmienna modalImg posłuży do nadania obrazkowi modala nowego źródła;
-var modalImg = document.getElementById("modalImage");
+var modalImg = document.getElementById("modal-image");
 
 // zmienna modalCaption posłuży do nadania obrazkowi opisu modala nowego źródła;
-var modalCaption = document.getElementById("modalcaption");
+var modalCaption = document.getElementById("modal-caption");
 
 // zmienne dla guzików posłużą nam do zamykania i przewijania modala;
-var modalCloseButton = document.getElementById("modalclosebutton");
-var modalLeftButton = document.getElementById("modalleftbutton");
-var modalRightButton = document.getElementById("modalrightbutton");
+var modalCloseButton = document.getElementById("modal-close-button");
+var modalLeftButton = document.getElementById("modal-left-button");
+var modalRightButton = document.getElementById("modal-right-button");
 
-$(".galeria").click(function() {
+
+$(".galeria").click(function(left) {
 
 // nadaje wciśniętemu obrazkowi klasę activemodal
     $(this).addClass('activemodal');
@@ -39,15 +40,21 @@ $(".galeria").click(function() {
     modalImg.src = galleryArray[activeImageIndex].src;
     modalCaption.textContent = descriptionArray[activeImageIndex].textContent;
 
-// nadaje krzyżykowi funkcję zamykania modala;
-    modalCloseButton.onclick = function() {
+// nadaje opisowi taką szerokość jak ma obrazek;
+
+    $(modalCaption).width($(modalImg).width());
+
+// definiuje funkcję zamknięcia modala;
+
+    function pressClose() {
       modalCon.style.display = "none";
       $(galleryArray[activeImageIndex]).removeClass('activemodal');
       $(descriptionArray[activeImageIndex]).removeClass('activedescription');
     }
 
-// nadaje guzikowi w lewo funkcjonalność;
-    modalLeftButton.onclick = function() {
+// definiuje funkcję guzika w lewo;
+
+    function pressLeft() {
       modalImg.src = galleryArray[activeImageIndex-1].src;
       $(galleryArray[activeImageIndex-1]).addClass('activemodal');
       $(galleryArray[activeImageIndex]).removeClass('activemodal');
@@ -55,14 +62,15 @@ $(".galeria").click(function() {
       $(descriptionArray[activeImageIndex-1]).addClass('activedescription');
       $(descriptionArray[activeImageIndex]).removeClass('activedescription');
       activeImageIndex = activeImageIndex - 1;
-      $("#modalImage").finish();
-      $("#modalImage").css({ opacity: '0', blur: '10px' });
-      $("#modalImage").animate({opacity: '1', blur: '0px'}, "slow");
-
+      $("#modal-image").finish();
+      $("#modal-image").css({ opacity: '0', blur: '10px' });
+      $("#modal-image").animate({opacity: '1', blur: '0px'}, "slow");
+      $(modalCaption).width($(modalImg).width());
     }
 
-// nadaje guzikowi w prawo funkcjonalność;
-    modalRightButton.onclick = function() {
+// definiuje funkcję guzika w prawo;
+
+    function pressRight() {
       modalImg.src = galleryArray[activeImageIndex+1].src
       $(galleryArray[activeImageIndex+1]).addClass('activemodal');
       $(galleryArray[activeImageIndex]).removeClass('activemodal');
@@ -70,9 +78,38 @@ $(".galeria").click(function() {
       $(descriptionArray[activeImageIndex+1]).addClass('activedescription');
       $(descriptionArray[activeImageIndex]).removeClass('activedescription');
       activeImageIndex = activeImageIndex + 1;
-      $("#modalImage").finish();
-      $("#modalImage").css({ opacity: '0', blur: '10px' });
-      $("#modalImage").animate({ opacity: '1', blur: '0px'}, "slow");
+      $("#modal-image").finish();
+      $("#modal-image").css({ opacity: '0', blur: '10px' });
+      $("#modal-image").animate({ opacity: '1', blur: '0px'}, "slow");
+      $(modalCaption).width($(modalImg).width());
     }
 
+// definiuje akcje on-click przycisków lewo/prawo/naciśnięcia na szare tło;
+
+    modalCon.onclick = function(e) {
+      if($(e.target).is('.modal-content, #modal-left-button, #modal-right-button')){
+      e.preventDefault();
+      return;
+      }
+      pressClose();
+    }
+    modalLeftButton.onclick = pressLeft();
+    modalRightButton.onclick = pressRight();
+
+// definiuje akcje on-click klawiaturą - left, right, escape;
+
+    $(document).keydown(function(f) {
+            if (f.keyCode == 37) { // left
+    console.log("działa");
+    pressLeft()
+            }
+            else if (f.keyCode == 39) { // right
+    console.log("działa");
+    pressRight()
+            }
+            else if (f.keyCode == 27) { // escape
+    console.log("działa");
+    pressClose()
+          };
+    });
 });

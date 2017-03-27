@@ -624,23 +624,25 @@ footer .copyright {
 
 /* Oferta - kategorie - modal do przeglądania galerii */
 
-.modal {
-	display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+#modal-main {
+	display: none; /* default = hidden */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
 }
 
-.modal-container {
+#modal-container {
 	position: relative;
 	margin:	0 auto;
-	width: 700px;
+	width: 800px;
+	margin-top:	100px;
+	z-index: 2;
 }
 
 .modal-content {
@@ -648,28 +650,28 @@ footer .copyright {
 	clear: both;
   margin: auto;
   display: block;
-  max-width: 700px;
-	height:	420px;
-	padding-top: 10px;
-	margin-top:	100px;
+  max-width: 800px;
+	height:	480px;
 }
 
-#modalcaption {
+#modal-caption {
 	font-weight: normal;
-	font-size: 1.7em;
+	font-size: 1.9em;
 	margin-top: 10px;
   margin-left: auto;
 	margin-right: auto;
   display: block;
   width: 80%;
-	width: 700px;
+	width: 800px;
   text-align: center;
 	vertical-align: middle;
-	padding: 10px;
+	padding: 20px 0px;
+	background-color: rgb(40,0,0);
+  background-color: rgba(40,0,0,0.7);
   color: #fff;
 }
 
-.modal-content, #caption {
+.modal-content {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -688,51 +690,28 @@ footer .copyright {
     to {transform:scale(1)}
 	}
 
-/* Oferta - kategorie - przycisk zamykający modal */
-
-#modalclosebutton {
-  position: relative;
-	float: right;
-	margin-top: 100px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-#modalclosebutton:hover, #modalclosebutton:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* Modal side Buttons */
 
-#modalleftbutton{
+#modal-left-button, #modal-right-button {
 	position: absolute;
-	margin: -280px 0px 0px -50px;
 	cursor: pointer;
 	padding: 16px;
 	color: #fff;
-	font-size: 30px;
+	font-size: 40px;
+	box-sizing: border-box;
+	width: 55px;
+	height: 50px;
 }
 
-#modalrightbutton{
-	position: absolute;
-	margin: -280px 0px 0px 703px;
-	cursor: pointer;
-	padding: 16px;
-	color: #fff;
-	font-size: 30px;
+#modal-left-button{
+	margin: 215px 0px 0px -60px;
 }
 
-#modalrightbutton:hover{
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+#modal-right-button{
+	margin: 215px 0px 0px 805px;
 }
 
-#modalleftbutton:hover{
+#modal-right-button:hover, #modal-left-button:hover{
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
