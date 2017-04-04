@@ -93,23 +93,23 @@ $(".galeria").click(function(left) {
       }
       pressClose();
     }
-    modalLeftButton.onclick = pressLeft();
-    modalRightButton.onclick = pressRight();
-
+    modalLeftButton.onclick = function(){
+      pressLeft();
+    }
+    modalRightButton.onclick = function(){
+      pressRight();
+    }
 // definiuje akcje on-click klawiaturą - left, right, escape;
 
     $(document).keydown(function(f) {
             if (f.keyCode == 37) { // left
-    console.log("działa");
-    pressLeft()
+    pressLeft();
             }
             else if (f.keyCode == 39) { // right
-    console.log("działa");
-    pressRight()
+    pressRight();
             }
             else if (f.keyCode == 27) { // escape
-    console.log("działa");
-    pressClose()
+    pressClose();
           };
     });
 });
