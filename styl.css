@@ -34,12 +34,21 @@ h1, h2, h3, h4, h5, h6, ul, li, p, a {
 p, a, li { color: #304055; 	font-size: 1.5em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: normal; }
 ul { color: #304055; 	font-size: 1.0em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: normal; }
 h1 { color: #304055; 	font-size: 3.0em; font-family: arial, tahoma, verdana, sans-serif; 	font-weight: bold; }
-h2 { color: #304055;	font-size: 2.0em;	font-family: arial, tahoma, verdana, sans-serif;	font-weight: bold; }
 h3 { color: #304055;	font-size: 2.0em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: bold; }
 h4 { color: #304055;	font-size: 1.7em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: normal; }
 h5 { color: #304055;	font-size: 1.8em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: bold; }
 h6 { color: #304055;	font-size: 1.8em;	font-family: arial, tahoma, verdana, sans-serif; 	font-weight: bold; }
-
+h2 {
+	color: #304055;
+	font-size: 2.0em;
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border: 1px solid #e0e0e0;
+}
 /* Header */
 
 header {
@@ -329,9 +338,38 @@ border-left:solid 1px #fff;
 	text-align: center;
 }
 
-#main h3 {
+#main h1 {
+	color: #304055;
+	font-size: 2.0em;
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
+
+#main h2 {
+	color: #304055;
+	font-size: 1.6em;
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-weight: normal;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none;
+	text-align: justify;
+}
+
+#main h3 {
+	color: #304055;
+	font-size: 2.0em;
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border: 1px solid #e0e0e0;
+}
+
 
 /* Main - artykuły */
 
@@ -357,14 +395,13 @@ border-left:solid 1px #fff;
 	padding: 20px;
 	background: #ffffff;
 	text-align: justify;
-	height: 400px;
+	height: 500px;
 }
 
 #main article h2 {
 	margin-bottom: 10px;
 	padding: 5px;
 	background: #ffffff;
-	text-align: center;
 }
 
 #main article a.wiecej {
@@ -886,18 +923,6 @@ footer .copyright {
 }
 
 /* Ogólny styla dla h2 - nagłówku na podstronach */
-
-h2 {
-	color: #304055;
-	font-size: 2.0em;
-	font-family: arial, tahoma, verdana, sans-serif;
-	font-weight: bold;
-	text-align: center;
-	padding: 5px;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	border: 1px solid #e0e0e0;
-}
 
 /* Logo producenta po najechaniu myszką na obrazek w galerii */
 
